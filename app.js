@@ -127,16 +127,16 @@ function result(bill, customTip, people, item) {
             resultA = result * Number(people.value) 
             console.log(result)
             console.log(resultA)
-            tipAmt.innerHTML = parseFloat(result.toFixed(2))
-            tipTotAmt.innerHTML = parseFloat(resultA.toFixed(2))
+            tipAmt.innerHTML =  "$" + parseFloat(result.toFixed(2))
+            tipTotAmt.innerHTML = '$' + parseFloat(resultA.toFixed(2))
             resetBtn.classList.add('active-button')
         } else {
             result = Number(item.value) / 100 * Number(bill.value) / Number(people.value)
             resultA = result * Number(people.value) 
             console.log(resultA)
             console.log(result)
-            tipAmt.innerHTML = parseFloat(result.toFixed(2));
-            tipTotAmt.innerHTML = parseFloat(resultA.toFixed(3))
+            tipAmt.innerHTML = "$" + parseFloat(result.toFixed(2));
+            tipTotAmt.innerHTML = "$" + parseFloat(resultA.toFixed(3))
             resetBtn.classList.add('active-button')
 
         }
