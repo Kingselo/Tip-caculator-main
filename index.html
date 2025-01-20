@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- Css Style Link  -->
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(225, 67%, 4%); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <p>SPLI <br> TTER</p>
+  </header>
+
+  <main>
+    <div id="container">
+      <section class="form-sect">
+        <form action="">
+          <!-- Bill Input Area -->
+          <div id="bill-cont">
+            <div class="valid-cont">
+              <label for="" id="bill">Bill</label>
+              <span class="valid-bill">can't be zero</span>
+            </div>
+            <div id="bill-input" class="half-input">
+              <img src="/images/icon-dollar.svg" alt="">
+              <input type="number" name="number" id="bill-number" class="main-half-input bill-number" placeholder="0">
+            </div>
+          </div>
+
+          <!-- Select Tip Section -->
+           <div id="select-tip-cont">
+            <label for="">Select Tip %</label>
+            <div id="select-tip">
+             <button type="button" id="tip-one" class="tip tip-5%" value="5"> 5%</button>
+             <button type="button" id="tip-two" class="tip tip-10%" value="10">10%</button>
+             <button type="button" id="tip-three" class="tip tip-15%" value="15">15%</button>
+             <button type="button" id="tip-four" class="tip tip-25%" value="25">25%</button>
+             <button type="button" id="tip-five" class="tip tip-50%" value="50" >50%</button>
+             <input type="number" id="tip-custom" class="tip-custom" placeholder="Custom">
+            </div>
+           </div>
+
+           <!-- Number Of People Section -->
+           <div id="people-cont">
+            <div class="valid-cont">
+              <label for="" id="people-text" class="">Number Of People</label> 
+              <span class="valid-people">can't be zero</span>
+            </div>
+            <div id="people-in-cont" class="half-input">
+              <img src="/images/icon-person.svg" alt="">
+              <input type="number" id="people-input" class="main-half-input" placeholder="0">
+            </div>
+           </div>
+
+        </form>
+      </section>
+      <section class="form-input-sect">
+        <div  id="tip-cont">
+          <div id="tip-amt-cont">
+            <div>
+              <h2 id="tip-text">Tip Amount </h2>
+              <span>/ person</span>
+            </div>
+            <h1 id="tip-amt">$0.00</h1>
+          </div>
+          <div id="tip-tot-cont">
+            <div>
+              <h2 id="tip-tot-text">Total </h2>
+              <span>/ person</span>
+            </div>
+            <h1 id="tip-tot-amt">$0.00</h1>
+          </div>
+        </div>
+
+
+
+        <button  id="reset-btn" >reset</button>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Kingsley_d_techbro</a>.
+    </div>
+
+  </footer>
+  
+
+
+
+
+  <script src="app.js"></script>
+ 
+</body>
+</html>

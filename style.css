@@ -1,0 +1,384 @@
+/* Google Font Import Link */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Custom Style */
+
+:root {
+    /* Primary Color */
+    --primary-color: hsl(172, 67%, 45%);
+    /* Neutral Color */
+    --neutral-1-color-dark:  hsl(183, 100%, 15%);
+    --neutral-2-Dark-gray-color: hsl(186, 14%, 43%);
+    --neutral-3-Grayish-color: hsl(184, 14%, 56%);
+    --neutral-4-light-gray-color: hsl(185, 41%, 84%);
+    --neutral-5-Verylight-gray-color:  hsl(189, 41%, 97%);
+    --White:  hsl(0, 0%, 100%);
+    font-size: 10px;
+
+    /* Font Size For Form Input */
+    --form-input-s: 20px;
+    font-family: "Space Mono", serif;
+    font-weight: 100;
+    font-style: normal;
+}
+body{
+    background-color: var(--neutral-4-light-gray-color);
+    display: grid;
+    height: 100vh;
+    /* flex-direction: column; */
+    align-content: space-between;
+   
+    padding: 50px;
+    align-self: stretch;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    /* margin-bottom: 30px ; */
+    /* padding: 10px; */
+}
+
+header p {
+    letter-spacing: 4px;
+    font-size: 2.4rem;
+    line-height: 3rem;
+    color: var(--neutral-1-color-dark);
+}
+/* Main Element Section */
+main {
+    display: flex;
+    justify-content: center;
+   
+}
+main #container {
+    display: flex;
+    background-color: var(--White);
+    width: 55%;
+    height: auto;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 30px;   
+    gap: 3rem;
+    border-radius: 15px;
+    box-shadow: 1px 2px 20px 1px  rgba(170, 170, 170, 0.425);
+}
+
+/* Contianer Section */
+#container section {
+    width: 50%;
+}
+
+.valid-bill {
+    display: none;
+}
+
+.valid-people {
+    display: none;
+}
+
+.validation {
+    display: flex !important;
+    color: red !important;
+}
+
+
+/* Form Section */
+
+form {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-content: end;
+    /* background-color: green; */
+    /* width: ; */
+}
+
+form label {
+    font-size: 1rem;
+    color: var(--neutral-1-color-dark);
+}
+
+form #bill-cont {
+    display: grid;
+    gap: 1rem;
+}
+
+form .half-input {
+    background-color: var(--neutral-5-Verylight-gray-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 10px;
+    padding-left: 10px;
+    height: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.outline {
+    border: 1px solid var(--primary-color);
+}
+
+form .half-input svg{
+ 
+}
+
+/* For Bill And People Input */
+
+form .half-input input {
+     border: none;
+     width: 90%; 
+     text-align: right;
+     background-color: transparent;
+     font-size: var(--form-input-s);
+}
+
+
+
+form .half-input input:focus  {
+    outline: none;
+    text-align: right;
+    /* letter-spacing: 2px */
+}
+
+
+form input, button{
+    height: 40px;
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: "Space Mono", serif;
+    font-weight: 700;
+    color: var(--neutral-1-color-dark);
+    caret-color: var(--primary-color);
+}
+
+.half-input:focus {
+    border: 2px solid var(--primary-color);
+}
+
+.valid-cont {
+    display: flex; 
+    justify-content: space-between;
+}
+
+form input:focus {
+    color: var(--neutral-1-color-dark);
+
+}
+
+form input::placeholder {
+    color: var(--neutral-3-Grayish-color)
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* From Select Tip Section */
+#select-tip-cont {
+    display: grid;
+    gap: 10px;
+    width: 100%;
+}
+
+#select-tip {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+    width: 100%;
+}
+
+#select-tip button, input {
+    width: calc(100%);
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-family: 24px;
+}
+
+#select-tip .tip-custom {
+    background-color: var(--neutral-5-Verylight-gray-color);
+    text-align: center;
+    caret-color: var(--primary-color);
+    text-align: end;
+    padding: 2px;
+}
+
+#select-tip .tip-custom:focus {
+    text-align: end;
+    padding: 2px;
+    color: var(--neutral-1-color-dark);
+    outline: 1px var(--primary-color) solid;
+}
+
+#select-tip .tip {
+    background-color: var(--neutral-1-color-dark);
+    color: var(--White);
+}
+
+#select-tip .tip:hover {
+    background-color: var(--neutral-4-light-gray-color);
+    color: var(--neutral-1-color-dark);
+}
+
+#select-tip input::placeholder {
+    text-align: center;
+    color: var(--neutral-3-Grayish-color);
+}
+
+/* Active For Marking Selected Tip */
+
+.active{
+    background-color:  var(--primary-color) !important;
+    color: var(--neutral-1-color-dark) !important;
+}
+
+/* People Count Section */
+
+#people-cont {
+    display: grid;
+    gap: 10px;
+}
+
+/* Form Data Section */
+.form-input-sect {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between !important;
+    align-self: stretch;
+    background-color: var(--neutral-1-color-dark);
+    padding: 3rem;
+    height: auto;
+    border-radius: 10px;
+    color: var(--White);
+}
+
+
+
+
+.form-input-sect #tip-cont {
+    display: grid;
+    gap: 2rem;
+}
+#tip-amt-cont, #tip-tot-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#tip-amt-cont div, #tip-tot-cont div {
+    font-size: 0.9rem;
+}
+
+#tip-amt, #tip-tot-amt {
+    color: var(--primary-color);
+    font-size: 3rem;
+}
+.active-button {
+    background-color: var(--primary-color) !important;
+    cursor: pointer;
+    pointer-events: all !important;
+}
+.form-input-sect button {
+    height: 40px;
+    background-color: hsla(172, 67%, 45%, 0.317);
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    /* cursor: pointer; */
+    pointer-events: none;
+    color: var(--neutral-1-color-dark);
+}
+
+.active-button:hover {
+    background-color: var(--neutral-4-light-gray-color) !important;
+}
+
+/* Responsive Design */ 
+
+@media (max-width: 600px) {
+    body {
+        padding: 0px; 
+        grid-template-rows: 1fr 1fr;
+    }
+    header {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    header p {
+        font-size: 22px;
+        /* line-height: 2rem; */
+    }
+ 
+    main {
+        /* flex-direction: column; */
+
+    }
+    main #container {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        justify-content: space-between;
+        /* gap: 15px; */
+
+        padding:30px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        position: relative;
+    }
+
+    .form-input-sect {
+        padding: 20px;
+        gap: 2rem;
+    }
+
+    #container input {
+        height: 45px;
+    }
+    form .half-input {
+        height: 45px;
+    }
+
+    #container section {
+        width: 100%;
+    }
+
+    .attribution {
+        display: none;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1000px)  {
+   main #container {
+    width: 85%;
+   }
+   header p {
+    font-size: 5rem;
+   }
+   #container input {
+    height: 50px;
+}
+form .half-input {
+    height: 50px;
+}
+   body {
+    place-items: center;
+   }
+}
